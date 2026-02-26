@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Life Burguer - Login</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container header-container">
+    <h1 class="logo"><a href="index.html">🍔 Life Burguer</a></h1>
+  </div>
+</header>
+
+<main class="section fade-in">
+<div class="container">
+  <h2>Login da Equipe</h2>
+  <form id="login-form" novalidate>
+    <input id="admin-email" type="email" placeholder="E-mail" required>
+    <input id="admin-pass" type="password" placeholder="Senha" required minlength="4">
+    <button type="submit" class="btn">Entrar</button>
+    <p class="form-status" id="login-status"></p>
+  </form>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Life Burguer - Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

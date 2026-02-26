@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Life Burguer - Carrinho</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container header-container">
+    <h1 class="logo"><a href="index.html">🍔 Life Burguer</a></h1>
+    <nav>
+      <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="carrinho.html">Carrinho</a></li>
+        <li><a href="login.html">Login Equipe</a></li>
+        <li><button id="toggle-theme" aria-label="Alternar tema">🌓</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="section fade-in">
+<div class="container">
+  <h2>Seu Carrinho</h2>
+  <div id="cart-container"></div>
+
+  <form id="checkout-form" class="checkout-form" novalidate>
+    <h3>Informações de entrega</h3>
+    <input id="name" type="text" placeholder="Nome completo" required minlength="3">
+    <input id="address" type="text" placeholder="Endereço completo" required minlength="5">
+    <input id="cep" type="text" placeholder="CEP" required pattern='\d{5}-?\d{3}'>
+    <h3>Pagamento</h3>
+    <select id="payment" required>
+      <option value="">Escolha a forma de pagamento</option>
+      <option value="pix">PIX</option>
+      <option value="card">Cartão</option>
+      <option value="cash">Dinheiro</option>
+    </select>
+    <p class="totals"><span id="subtotal">Subtotal: R$ 0,00</span> <span id="shipping">Frete: R$ 0,00</span></p>
+    <p class="totals"><strong id="total">Total: R$ 0,00</strong></p>
+    <button type="submit" class="btn">Confirmar Pedido</button>
+  </form>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Life Burguer - Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

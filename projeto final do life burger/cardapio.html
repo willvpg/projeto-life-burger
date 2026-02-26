@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Life Burguer - Cardápio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container header-container">
+    <h1 class="logo"><a href="index.html">🍔 Life Burguer</a></h1>
+    <nav>
+      <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="carrinho.html">Carrinho</a></li>
+        <li><a href="login.html">Login Equipe</a></li>
+        <li><button id="toggle-theme" aria-label="Alternar tema">🌓</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="section fade-in">
+  <div class="container">
+    <h2>Nosso Cardápio</h2>
+
+    <div class="controls">
+      <input id="search" type="search" placeholder="Pesquisar produto..." aria-label="Pesquisar">
+      <div class="filters">
+        <button class="filter-btn active" data-cat="all">Todos</button>
+        <button class="filter-btn" data-cat="burgers">Burgers</button>
+        <button class="filter-btn" data-cat="chicken">Chicken</button>
+        <button class="filter-btn" data-cat="premium">Premium</button>
+        <button class="filter-btn" data-cat="xis">Xis</button>
+        <button class="filter-btn" data-cat="veggie">Veggie</button>
+        <button class="filter-btn" data-cat="acompanhamentos">Acompanhamentos</button>
+        <button class="filter-btn" data-cat="bebidas">Bebidas</button>
+      </div>
+    </div>
+
+    <div id="products" class="grid" aria-live="polite"></div>
+  </div>
+</main>
+
+<!-- Modal "Saiba mais" -->
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-label="Detalhes do produto">
+    <button id="close-modal" class="close" aria-label="Fechar">&times;</button>
+    <img id="modal-img" src="" alt="" class="modal-img">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <p id="modal-price" class="price"></p>
+    <button id="modal-add" class="btn">Adicionar ao Carrinho</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Life Burguer - Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Life Burguer - Administração</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container header-container">
+    <h1 class="logo"><a href="index.html">🍔 Life Burguer</a></h1>
+  </div>
+</header>
+
+<main class="section fade-in">
+<div class="container">
+  <h2>Painel Administrativo</h2>
+  <section class="admin-grid">
+    <div class="admin-list">
+      <h3>Produtos Cadastrados</h3>
+      <ul id="product-list"></ul>
+    </div>
+    <div class="admin-form">
+      <h3>Adicionar / Editar Produto</h3>
+      <form id="product-form" novalidate>
+        <input id="p-id" type="hidden">
+        <input id="p-name" type="text" placeholder="Nome do produto" required>
+        <textarea id="p-desc" placeholder="Descrição" required></textarea>
+        <input id="p-price" type="number" step="0.01" placeholder="Preço (ex: 24.90)" required min="0.1">
+        <input id="p-cat" type="text" placeholder="Categoria (burgers, chicken,...)" required>
+        <input id="p-img" type="text" placeholder="Caminho da imagem (ex: img/burger1.jpg)">
+        <button type="submit" class="btn">Salvar</button>
+      </form>
+      <p><button id="logout" class="btn">Sair</button></p>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Life Burguer - Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
